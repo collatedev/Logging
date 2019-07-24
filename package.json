@@ -1,37 +1,41 @@
 {
-	"name": "logging",
-	"version": "1.0.0",
-	"description": "Logging system for collate backend",
-	"main": "./dist/index.js",
-	"scripts": {
-		"build": "npm run lint && tsc -p .",
-		"test": "jest",
-		"lint": "tslint src/**/*.ts && tslint tests/**/*.ts"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/collatedev/Logging.git"
-	},
-	"author": "Evan Coulson",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/collatedev/Logging/issues"
-	},
-	"homepage": "https://github.com/collatedev/Logging#readme",
-	"devDependencies": {
-		"@types/jest": "24.0.15",
-		"ts-jest": "24.0.2",
-		"jest": "24.8.0",
-		"tslint": "^5.13.0",
-		"tslint-config-prettier": "^1.18.0",
-		"tslint-config-standard": "^8.0.1"
-	},
-	"dependencies": {
-		"@types/logform": "^1.2.0",
-		"@types/node": "^11.9.5",
-		"logform": "^2.1.2",
-		"ts-node": "^8.0.2",
-		"typescript": "^3.3.3333",
-		"winston": "^3.2.1"
-	}
+  "name": "@collate/logging",
+  "version": "1.0.0",
+  "description": "Logging system for collate backend",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "npm run lint && tsc -p .",
+    "test": "jest",
+    "lint": "tslint src/**/*.ts && tslint tests/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collatedev/Logging.git"
+  },
+  "author": "Evan Coulson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/collatedev/Logging/issues"
+  },
+  "homepage": "https://github.com/collatedev/Logging#readme",
+  "devDependencies": {
+    "@types/jest": "24.0.15",
+    "ts-jest": "24.0.2",
+    "jest": "24.8.0",
+    "tslint": "^5.13.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^8.0.1"
+  },
+  "dependencies": {
+    "@types/logform": "^1.2.0",
+    "@types/node": "^11.9.5",
+    "logform": "^2.1.2",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3333",
+    "winston": "^3.2.1"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  }
 }
