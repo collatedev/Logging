@@ -14,7 +14,8 @@
 		"allowSyntheticDefaultImports": true,
 		"noUnusedLocals": true,
 		"strictPropertyInitialization": true,
-		"strictNullChecks": true
+		"strictNullChecks": true,
+		"declaration": true
 	},
 	"include": [
 		"src/**/*"
