@@ -33,7 +33,10 @@ const options : any = {
 	},
 };
 
-function Logger(logLevel : string, fileName? : string) : Winston.Logger {
+// tslint:disable-next-line: no-empty-interface
+interface ILogger extends Winston.Logger {}
+
+function CreateLogger(logLevel : string, fileName? : string) : ILogger {
 	return Winston.createLogger({
 		transports: getTransports(fileName),
 		level: logLevel,
@@ -54,6 +57,7 @@ function getTransports(fileName? : string) : any {
 				new Winston.transports.File(options.file(fileName)),
 				new Winston.transports.Console(options.console)
 			];
+		case 'development':
 		case 'debug':
 			return [
 				new Winston.transports.Console(options.console)
@@ -116,4 +120,7 @@ function devFormat() : Format {
 // 	},
 // };
 
-export { Logger };
+export { 
+	ILogger,
+	CreateLogger 
+};
