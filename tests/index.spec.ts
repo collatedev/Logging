@@ -1,7 +1,5 @@
-import { 
-	ILogger,
-	CreateLogger
-} from "../src/index";
+import winston from "winston";
+import CreateLogger from "../src/WinstonLogger";
 
 describe("Logger", () => {
     const OLD_ENV : any = process.env;
@@ -19,7 +17,7 @@ describe("Logger", () => {
     test("Creates a logger in dev", () => {
 		process.env.NODE_ENV = "development";
 
-		const logger : ILogger = CreateLogger('info');
+		const logger : winston.Logger = CreateLogger('info');
 
 		expect(logger.level).toEqual("info");
 		expect(logger.transports).toHaveLength(1);
@@ -29,7 +27,7 @@ describe("Logger", () => {
     test("Creates a logger in debug", () => {
 		process.env.NODE_ENV = "debug";
 
-		const logger : ILogger = CreateLogger('info');
+		const logger : winston.Logger = CreateLogger('info');
 
 		expect(logger.level).toEqual("info");
 		expect(logger.transports).toHaveLength(1);
@@ -40,7 +38,7 @@ describe("Logger", () => {
 		process.env.NODE_ENV = "production";
 		const transportCount : number = 2;
 
-		const logger : ILogger = CreateLogger('info', 'a.log');
+		const logger : winston.Logger = CreateLogger('info', 'a.log');
 
 		expect(logger.level).toEqual("info");
 		expect(logger.transports).toHaveLength(transportCount);
