@@ -1,12 +1,13 @@
 {
   "name": "@collate/logging",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Logging system for collate backend",
-  "main": "./dist/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "build": "npm run lint && tsc -p .",
     "test": "jest",
-    "lint": "tslint src/**/*.ts && tslint tests/**/*.ts"
+	"lint": "tslint src/**/*.ts && tslint tests/**/*.ts",
+	"postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
