@@ -1,5 +1,5 @@
 {
-	"name": "Logging",
+	"name": "logging",
 	"version": "1.0.0",
 	"description": "Logging system for collate backend",
 	"main": "./dist/index.js",
@@ -27,8 +27,11 @@
 		"tslint-config-standard": "^8.0.1"
 	},
 	"dependencies": {
+		"@types/logform": "^1.2.0",
 		"@types/node": "^11.9.5",
+		"logform": "^2.1.2",
 		"ts-node": "^8.0.2",
 		"typescript": "^3.3.3333",
+		"winston": "^3.2.1"
 	}
 }
