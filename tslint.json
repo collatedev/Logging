@@ -1,0 +1,31 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-config-standard",
+		"tslint-config-prettier"
+    ],
+    "jsRules": {},
+    "rules": {
+        "ordered-imports": false,
+        "object-literal-sort-keys": false,
+		"member-ordering": false,
+		"no-magic-numbers": true,
+		"typedef": [
+			true,
+			"call-signature",
+			"arrow-call-signature",
+			"parameter",
+			"arrow-parameter",
+			"property-decleration",
+			"variable-declaration",
+			"member-variable-declaration",
+			"object-destructuring",
+			"array-destructuring"
+		],
+		"max-line-length": [true, 120],
+		"semicolon": true,
+		"no-null-keyword": false
+    },
+    "rulesDirectory": []
+}
