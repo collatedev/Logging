@@ -1,6 +1,6 @@
 {
   "name": "@collate/logging",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Logging system for collate backend",
   "main": "./lib/index.js",
   "scripts": {
