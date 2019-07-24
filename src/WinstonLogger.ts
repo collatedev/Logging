@@ -105,13 +105,4 @@ function devFormat() : Format {
 	);
 }
 
-// TODO : Move to Server module
-// create a stream object with a 'write' function that will be used by `morgan`
-// const Stream : StreamOptions = {
-// 	write: (message: string): void => {
-// 		// use the 'info' log level so the output will be picked up by both transports (file and console)
-// 		Logger.info(message);
-// 	},
-// };
-
 export default CreateLogger;
