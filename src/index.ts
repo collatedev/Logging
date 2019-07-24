@@ -13,7 +13,6 @@ const options : any = {
 			level: 'info',
 			filename: path.resolve(
 				__dirname, 
-				'..', 
 				'..',
 				'logs',
 				fileName
@@ -47,8 +46,6 @@ function CreateLogger(logLevel : string, fileName? : string) : ILogger {
 
 function getTransports(fileName? : string) : any {
 	switch (process.env.NODE_ENV) {
-		case 'test':
-			return [];
 		case 'production':
 			if (fileName === undefined) {
 				throw new Error("Loggers that log to a file need a file name");
@@ -63,7 +60,7 @@ function getTransports(fileName? : string) : any {
 				new Winston.transports.Console(options.console)
 			];	
 		default:
-			return [];
+			return [new Winston.transports.Console(options.console)];
 	}
 }
 
